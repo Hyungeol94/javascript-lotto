@@ -127,9 +127,9 @@ class App {
   }
 
   check_number_errors(amount){
+    if (this.not_number(amount)) throw new Error('[ERROR]not a number')
     if (this.not_positive(amount)) {throw new Error('[ERROR]not a positive number')};
     if (this.not_natural(amount)) throw new Error('[ERROR]not a natural number');
-    if (this.not_number(amount)) throw new Error('[ERROR]not a number')
   }
 
   //1000단위가 아닐 경우 예외처리
